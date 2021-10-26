@@ -1,3 +1,7 @@
+# Minima-mod
+The modified version of Minima by @adisaktijrs used in [my blog](https://blog.ncastillo.xyz).
+Font changed to Fira Sans and dark mode button moved to nav menu.
+
 # Minima
 An undoubtedly simple and lightweight dark/light mode theme for Hexo.
 

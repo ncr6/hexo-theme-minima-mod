@@ -1,35 +1,31 @@
+<% var title='' ; if (page.category) title=page.category; if (page.tag) title=page.tag; if (page.archive){ if
+  (page.year) title=page.year + (page.month ? '/' + page.month : '' ); else title="Archives" ; } %>
+  <% if(title) { %>
+    <h3>Posts sobre el tema: <%- title %>
+    </h3>
+    <% } %>
+      <% page.posts.each(function(item){ %>
 
-<%
-    var title = '';
-    if (page.category) title = page.category;
-    if (page.tag) title = page.tag;
-    if (page.archive){
-        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
-        else title = "Archives";
-    }
-%>
-<% if(title) { %>
-   <h3>Posts Related to — <%- title %></h3>
-<% } %>
-<% page.posts.each(function(item){ %>
+        <article>
+          <div class="row">
 
-  <article>
-    <div class="row">
+            <div class="three columns left lit">
+              <p class="bottom">
+                <%- full_date(item.date, 'L' ) %>
+                <%- full_date(item.date, 'LT' ) %>
+              </p>
+            </div>
+            <div class="nine columns left mb-3">
+              <a href="<%- url_for(item.path) %>">
+                <% if (item.title=="" ) { %>
+                  (Sin título)
+                  <% } else { %>
+                    <%- item.title %>
+                      <% } %>
+              </a>
+            </div>
+          </div>
+        </article>
 
-      <div class="three columns left lit">
-        <p class="bottom"><%- full_date(item.date, 'll') %></p>
-      </div>
-      <div class="nine columns left mb-3">
-        <a href="<%- url_for(item.path) %>">
-          <% if (item.title == "") { %>
-            no title
-          <% } else { %>
-            <%- item.title %>
-          <% } %>
-        </a>
-      </div>
-    </div>
-  </article>
-
-<% }); %>
-<%- partial('partial/pagination') %>
+        <% }); %>
+          <%- partial('partial/pagination') %>

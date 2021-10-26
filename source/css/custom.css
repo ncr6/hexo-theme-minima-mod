@@ -1,32 +1,28 @@
-/* dm-serif-display-regular - latin */
 @font-face {
-  font-family: 'DM Serif Display';
+  font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/dm-serif-display-v4-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('DM Serif Display Regular'), local('DMSerifDisplay-Regular'),
-       url('../fonts/dm-serif-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/dm-serif-display-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/dm-serif-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/dm-serif-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/dm-serif-display-v4-latin-regular.svg#DMSerifDisplay') format('svg'); /* Legacy iOS */
-
+  src: url('../fonts/FiraSans.eot'); /* IE9 Compat Modes */
+  src: local('Fira Sans Regular'),
+       url('../fonts/FiraSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FiraSans.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/FiraSans.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/FiraSans.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/FiraSans.svg') format('svg'); /* Legacy iOS */
   font-display: swap; /* Add font-display */
 }
 
-/* inter-regular - latin */
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Fira Sans';
   font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/inter-v2-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/inter-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
-
+  font-weight: 700;
+  src: url('../fonts/FiraSansBold.eot'); /* IE9 Compat Modes */
+  src: local('Fira Sans Bold'),
+       url('../fonts/FiraSansBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FiraSansBold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/FiraSansBold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/FiraSansBold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/FiraSansBold.svg') format('svg'); /* Legacy iOS */
   font-display: swap; /* Add font-display */
 }
 
@@ -142,6 +138,7 @@ img {
   position: absolute;
   display: block;
   cursor: pointer;
+  text-align: right;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -182,7 +179,7 @@ body.darkmode li p code {
 
 /* blockquote */
 blockquote {
-  font-family: 'Inter';
+  font-family: 'Fira Sans';
   background-color: rgba(148, 148, 149, 0.08) ;
   margin: 1.5em 0px;
   padding: 1.1em 20px 1px 20px;
@@ -190,7 +187,7 @@ blockquote {
 }
 
 blockquote footer {
-  font-family: 'Inter';
+  font-family: 'Fira Sans';
   font-size: 16px;
   padding-bottom: 10px;
   margin-top: -10px;
@@ -258,6 +255,12 @@ a.footer-link:focus {
   left: 0;
 }
 
+.theme-switcher {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
 body {
   position: absolute;
   top: 10px;
@@ -300,6 +303,7 @@ body.darkmode {
 }
 
 #madewith {
+  font-size: 0.8em;
   text-align: center;
 }
 

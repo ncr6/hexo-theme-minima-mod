@@ -4,8 +4,9 @@ code[class*="language-"] {
   color: #d4d4d4;
   font-size: 13px;
   text-shadow: none;
-  font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+  font-family: Hack, Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
     "Courier New", monospace;
+  font-display: swap;
   direction: ltr;
   text-align: left;
   white-space: pre;

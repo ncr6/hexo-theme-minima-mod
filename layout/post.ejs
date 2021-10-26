@@ -1,5 +1,9 @@
-  <h2><%- page.title %></h2>
+<h2>
+  <%- page.title %>
+</h2>
 
-  <%- page.content%>
-  <p><%- list_tags(page.tags, {class: 'classtest', show_count: false, style: false}) %> — <%- full_date(page.date, 'll') %></p>
+<%- page.content%>
+  <p>
+    — Publicado el <%- full_date(page.date, 'LL') %> a las <%- full_date(page.date, 'h:mm A') %> en <%- list_tags(page.tags, {class: 'classtest' , show_count: false, style: false}) %> 
+  </p>
   <%- partial('partial/comments') %>
