@@ -16,8 +16,8 @@
               <%- name %>
             </a>
             <% } %>
-              <a href="#" class="ml icon theme-switcher">
-                <div onclick=setDarkMode(true) id="darkBtn">
+              <a href="#" class="ml icon theme-switcher" style="text-decoration: none; display: inline-block; font-size: 1.3em;">
+                <div onclick=setDarkMode(true) id="darkBtn" class=hidden>
                   <%= theme.switch_dark %>
                 </div>
                 <div onclick=setDarkMode(false) id="lightBtn" class=hidden>
@@ -25,20 +25,25 @@
                 </div>
               </a>
               <script>
-                if (localStorage.getItem('preferredTheme') == 'dark') {
-                  setDarkMode(true)
+                setDarkMode(true);
+                
+                window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function(e) {
+                  e.matches ? setDarkMode(true) : setDarkMode(false);
+                });
+
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                  setDarkMode(false);
                 }
+
                 function setDarkMode(isDark) {
                   var darkBtn = document.getElementById('darkBtn')
                   var lightBtn = document.getElementById('lightBtn')
                   if (isDark) {
                     lightBtn.style.display = "inline"
                     darkBtn.style.display = "none"
-                    localStorage.setItem('preferredTheme', 'dark');
                   } else {
                     lightBtn.style.display = "none"
                     darkBtn.style.display = "inline"
-                    localStorage.removeItem('preferredTheme');
                   }
                   document.body.classList.toggle("darkmode");
                 }

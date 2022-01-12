@@ -2,13 +2,7 @@
 The modified version of Minima by @adisaktijrs used in [my blog](https://blog.ncastillo.xyz).
 Font changed to Fira Sans and dark mode button moved to nav menu.
 
-# Minima
-An undoubtedly simple and lightweight dark/light mode theme for Hexo.
-
-![Minima preview, device image by Freepik](https://adisaktijrs.github.io/2020/10/11/Hexo-Minima-Theme-v1-0-Officially-Released/minima.jpg)
-
-- See the demo [here](https://adisaktijrs.github.io/minima)
-- See the quick start instruction and documentation [here](https://adisaktijrs.github.io/2020/10/11/Hexo-Minima-Theme-v1-0-Officially-Released/)
+![Minima-mod preview](https://i.imgur.com/m3CkcMG.png)
 
 ## About Minima
 Minima is an undoubtedly simple and lightweight dark/light mode theme for Hexo. I created this from scratch using [Skeleton CSS](http://getskeleton.com/) boilerplate. It only uses CSS and Vanilla JS, without using unnecessary third-party 'render-blocking' libraries.
